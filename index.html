@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kips Battle of the Brain</title>
+    <!-- Modern Font: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Import jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <!-- Background Elements -->
+        <div class="bg-shape shape-1"></div>
+        <div class="bg-shape shape-2"></div>
+
+        <!-- Intro Screen -->
+        <div id="intro-screen" class="screen active">
+            <div class="glass-card intro-content">
+                <div class="logo-container">
+                    <!-- Inline image (user requested inline CSS size) -->
+                    <img src="logo.png" alt="Logo" style="width:60px; height:60px; object-fit:contain; display:block; margin:0 auto 20px;">
+                </div>
+                <h1 class="title-anim">KIPS BATTLE</h1>
+                <p class="subtitle-anim">The Ultimate Practice Arena</p>
+                <button id="start-btn" class="btn-primary glow-effect">Enter Arena <span class="arrow">→</span></button>
+            </div>
+        </div>
+
+        <!-- Menu Screen -->
+        <div id="menu-screen" class="screen hidden">
+            <header class="app-header">
+                <h2>Select Subject</h2>
+                <p>Choose your battlefield</p>
+            </header>
+            <div class="menu-grid">
+                <button class="menu-card mixed" onclick="startQuiz('mixed')">
+                    <div class="icon-box">⚡</div>
+                    <div class="card-text">
+                        <h3>Mixed Battle</h3>
+                        <p>100 MCQs — 25 from each subject</p>
+                    </div>
+                </button>
+                <button class="menu-card math" onclick="startQuiz('math')">
+                    <div class="icon-box">🔢</div>
+                    <div class="card-text">
+                        <h3>Mathematics</h3>
+                        <p>Logic & Numbers</p>
+                    </div>
+                </button>
+                <button class="menu-card physics" onclick="startQuiz('physics')">
+                    <div class="icon-box">⚛️</div>
+                    <div class="card-text">
+                        <h3>Physics</h3>
+                        <p>Laws of Nature</p>
+                    </div>
+                </button>
+                <button class="menu-card chemistry" onclick="startQuiz('chemistry')">
+                    <div class="icon-box">🧪</div>
+                    <div class="card-text">
+                        <h3>Chemistry</h3>
+                        <p>Reactions</p>
+                    </div>
+                </button>
+                <button class="menu-card computer" onclick="startQuiz('computer')">
+                    <div class="icon-box">💻</div>
+                    <div class="card-text">
+                        <h3>Computer</h3>
+                        <p>Tech & Code</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen hidden">
+            <div class="quiz-wrapper">
+                <header class="quiz-header">
+                    <div class="header-top">
+                        <span id="subject-tag" class="badge">Subject</span>
+                        <span id="question-counter" class="counter">1 / 50</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                </header>
+                
+                <div class="question-card">
+                    <h2 id="question-text">Loading Question...</h2>
+                </div>
+
+                <div class="options-grid" id="options-container">
+                    <!-- Options injected by JS -->
+                </div>
+
+                <div class="quiz-footer">
+                    <button id="next-btn" class="btn-secondary" disabled>Next Question</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen hidden">
+            <div class="glass-card result-card">
+                <h2>Mission Complete</h2>
+                <div class="score-circle-container">
+                    <svg class="progress-ring" width="120" height="120">
+                        <circle class="progress-ring__circle" stroke="white" stroke-width="4" fill="transparent" r="52" cx="60" cy="60"/>
+                    </svg>
+                    <div class="score-text">
+                        <span id="final-score">0</span>
+                        <small id="total-q">/ 50</small>
+                    </div>
+                </div>
+                <p id="result-message" class="result-msg">Result Pending</p>
+                
+                <div class="action-buttons">
+                    <button onclick="downloadPDF()" class="btn-primary icon-btn">
+                        <span>Download PDF</span> 📥
+                    </button>
+                    <button onclick="location.reload()" class="btn-secondary icon-btn">
+                        <span>Home</span> 🏠
+                    </button>
+                </div>
+
+                <div class="review-section">
+                    <h3>Performance Review</h3>
+                    <div id="review-list" class="review-list">
+                        <!-- Review items injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

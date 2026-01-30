@@ -1,0 +1,440 @@
+/* style.css */
+:root {
+    --bg-dark: #0f172a;
+    --bg-light: #1e293b;
+    --primary: #6366f1; /* Indigo */
+    --primary-glow: rgba(99, 102, 241, 0.4);
+    --secondary: #0ea5e9; /* Sky Blue */
+    --accent: #10b981; /* Emerald */
+    --danger: #ef4444; /* Red */
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --glass-bg: rgba(30, 41, 59, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+/* --- Animated Background --- */
+.bg-shape {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.4;
+    animation: floatShape 10s infinite alternate;
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    background: var(--primary);
+    top: -50px;
+    left: -50px;
+}
+
+.shape-2 {
+    width: 400px;
+    height: 400px;
+    background: var(--secondary);
+    bottom: -100px;
+    right: -100px;
+    animation-delay: -5s;
+}
+
+@keyframes floatShape {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(30px, 50px); }
+}
+
+/* --- Layout Containers --- */
+.app-container {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Screen Transitions --- */
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 1;
+}
+
+.screen.hidden {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* --- Components: Buttons --- */
+button {
+    font-family: var(--font-family);
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 16px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px var(--primary-glow);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--primary-glow);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--text-muted);
+    color: var(--text-muted);
+    padding: 14px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    border-color: var(--text-main);
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.btn-secondary:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.icon-btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    width: 100%;
+    justify-content: center;
+}
+
+/* --- Component: Glass Card --- */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Animations --- */
+@keyframes popIn { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* --- Intro Screen --- */
+.logo-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+}
+
+.intro-content .logo-container img {
+    animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.title-anim {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.3s forwards;
+}
+
+.subtitle-anim {
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.5s forwards;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.intro-content #start-btn {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.7s forwards;
+}
+
+/* --- Menu Screen --- */
+.app-header {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.app-header h2 { font-size: 2rem; }
+.app-header p { color: var(--text-muted); }
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.menu-card {
+    display: flex;
+    align-items: center;
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: 16px;
+    text-align: left;
+    transition: transform 0.2s, background 0.2s;
+    border: 1px solid var(--glass-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Menu Theme Colors */
+.menu-card.mixed::before { content:''; position: absolute; left: 0; width: 4px; height: 100%; background: #fbbf24; }
+.menu-card.math::before { content:''; position: absolute; left: 0; width: 4px; height: 100%; background: #ef4444; }
+.menu-card.physics::before { content:''; position: absolute; left: 0; width: 4px; height: 100%; background: #3b82f6; }
+.menu-card.chemistry::before { content:''; position: absolute; left: 0; width: 4px; height: 100%; background: #10b981; }
+.menu-card.computer::before { content:''; position: absolute; left: 0; width: 4px; height: 100%; background: #d946ef; }
+
+.menu-card .icon-box {
+    font-size: 2.5rem;
+    margin-right: 20px;
+    min-width: 60px;
+    text-align: center;
+}
+
+.menu-card h3 { color: var(--text-main); margin-bottom: 4px; }
+.menu-card p { color: var(--text-muted); font-size: 0.9rem; }
+
+/* --- Quiz Screen --- */
+.quiz-wrapper { width: 100%; }
+
+.quiz-header { margin-bottom: 20px; }
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.badge {
+    background: rgba(99, 102, 241, 0.2);
+    color: var(--primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.counter { color: var(--text-muted); font-weight: 600; }
+
+.progress-track {
+    width: 100%;
+    height: 8px;
+    background: var(--bg-light);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    width: 0%;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.question-card {
+    background: var(--bg-light);
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    border: 1px solid var(--glass-border);
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.question-card h2 { font-size: 1.25rem; line-height: 1.6; font-weight: 500; }
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.option-btn {
+    background: transparent;
+    border: 2px solid var(--bg-light);
+    color: var(--text-muted);
+    padding: 18px 20px;
+    border-radius: 16px;
+    font-size: 1rem;
+    text-align: left;
+    transition: all 0.2s;
+    position: relative;
+    font-weight: 500;
+}
+
+.option-btn:hover:not(.disabled) {
+    border-color: var(--primary);
+    background: rgba(99, 102, 241, 0.05);
+    color: var(--text-main);
+}
+
+.option-btn.selected {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.option-btn.correct {
+    background: rgba(16, 185, 129, 0.2);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.option-btn.wrong {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: var(--danger);
+    color: var(--danger);
+}
+
+/* Force correct style override on text if needed */
+.option-btn.correct.selected { background: var(--accent); color: white; }
+.option-btn.wrong.selected { background: var(--danger); color: white; }
+
+.quiz-footer { margin-top: 30px; text-align: center; }
+
+/* --- Result Screen --- */
+.score-circle-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score-text span { font-size: 2.5rem; font-weight: 700; color: var(--primary); }
+.score-text small { color: var(--text-muted); }
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.review-section {
+    text-align: left;
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Custom Scrollbar */
+.review-section::-webkit-scrollbar { width: 6px; }
+.review-section::-webkit-scrollbar-track { background: var(--bg-dark); }
+.review-section::-webkit-scrollbar-thumb { background: var(--bg-light); border-radius: 10px; }
+
+.review-item {
+    background: var(--bg-light);
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--text-muted);
+}
+
+.review-item.correct { border-left-color: var(--accent); }
+.review-item.wrong { border-left-color: var(--danger); }
+
+.review-q { display: block; font-weight: 600; margin-bottom: 5px; font-size: 0.95rem; }
+.review-ans { display: block; font-size: 0.85rem; color: var(--text-muted); }
+
+/* --- Mobile Optimization --- */
+@media (max-width: 768px) {
+    .options-grid { grid-template-columns: 1fr; }
+    
+    .title-anim { font-size: 2rem; }
+    
+    .glass-card { padding: 30px 20px; }
+    
+    .action-buttons { grid-template-columns: 1fr; }
+    
+    .question-card h2 { font-size: 1.1rem; }
+
+    /* Better touch targets */
+    .option-btn { padding: 20px; }
+}
