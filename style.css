@@ -474,6 +474,7 @@ button {
     pointer-events: none;
     letter-spacing: 0.5px;
     opacity: 0.8;
+    white-space: nowrap;
 }
 .credits span {
     background: linear-gradient(to right, var(--primary), var(--secondary));
@@ -498,4 +499,6 @@ button {
 
     /* Better touch targets */
     .option-btn { padding: 20px; }
+
+    .credits { font-size: 0.7rem; bottom: 10px; }
 }
