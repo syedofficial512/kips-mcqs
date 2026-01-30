@@ -209,6 +209,58 @@ const db = {
         { q: "Modem is used for:", o: ["Printing", "Internet connection", "Storage", "Typing"], a: 1 },
         { q: "Which one is the File extension of MS Word?", o: [".xls", ".ppt", ".doc", ".exe"], a: 2 },
         { q: "Computer without software is:", o: ["Useful", "Fast", "Secure", "Useless"], a: 3 }
+    ],
+    biology: [
+        { q: "Basic unit of life is:", o: ["Tissue", "Cell", "Organ", "System"], a: 1 },
+        { q: "Powerhouse of the cell is:", o: ["Ribosome", "Mitochondria", "Nucleus", "Golgi body"], a: 1 },
+        { q: "Cell wall is present in:", o: ["Animal cell", "Plant cell", "Human cell", "Bacterial virus"], a: 1 },
+        { q: "DNA is present in:", o: ["Cytoplasm", "Cell wall", "Nucleus", "Ribosome"], a: 2 },
+        { q: "Photosynthesis occurs in:", o: ["Mitochondria", "Chloroplast", "Nucleus", "Vacuole"], a: 1 },
+        { q: "Green pigment in plants is:", o: ["Carotene", "Xanthophyll", "Chlorophyll", "Melanin"], a: 2 },
+        { q: "Blood group discovered by:", o: ["Mendel", "Darwin", "Landsteiner", "Watson"], a: 2 },
+        { q: "Red blood cells contain:", o: ["Insulin", "Hemoglobin", "Plasma", "Antibody"], a: 1 },
+        { q: "Normal human body temperature is:", o: ["35°C", "36°C", "37°C", "38°C"], a: 2 },
+        { q: "Organ for respiration in humans:", o: ["Heart", "Lungs", "Liver", "Kidney"], a: 1 },
+        { q: "Unit of heredity is:", o: ["Chromosome", "Gene", "DNA", "Cell"], a: 1 },
+        { q: "Mendel worked on:", o: ["Wheat", "Maize", "Pea plant", "Rice"], a: 2 },
+        { q: "Dominant trait is expressed in:", o: ["Homozygous only", "Heterozygous", "Recessive", "Mutant"], a: 1 },
+        { q: "Enzymes are made of:", o: ["Carbohydrates", "Fats", "Proteins", "Vitamins"], a: 2 },
+        { q: "Human heart has chambers:", o: ["2", "3", "4", "5"], a: 2 },
+        { q: "Smallest bone in human body:", o: ["Femur", "Stapes", "Ulna", "Tibia"], a: 1 },
+        { q: "Vitamin C deficiency causes:", o: ["Rickets", "Night blindness", "Scurvy", "Beriberi"], a: 2 },
+        { q: "Site of protein synthesis:", o: ["Ribosome", "Lysosome", "Golgi", "Vacuole"], a: 0 },
+        { q: "Plants store food as:", o: ["Glucose", "Sucrose", "Starch", "Cellulose"], a: 2 },
+        { q: "White blood cells function:", o: ["Oxygen transport", "Digestion", "Defense", "Clotting"], a: 2 },
+        { q: "Largest organ of human body:", o: ["Liver", "Skin", "Brain", "Lung"], a: 1 },
+        { q: "Blood clotting requires:", o: ["Iron", "Calcium", "Sodium", "Potassium"], a: 1 },
+        { q: "Digestion of proteins starts in:", o: ["Mouth", "Stomach", "Intestine", "Liver"], a: 1 },
+        { q: "Pancreas secretes:", o: ["Bile", "Insulin", "Pepsin", "Amylase"], a: 1 },
+        { q: "Bile is stored in:", o: ["Liver", "Gall bladder", "Pancreas", "Stomach"], a: 1 },
+        { q: "Normal pH of blood is about:", o: ["6.8", "7.0", "7.4", "8.0"], a: 2 },
+        { q: "Male reproductive cell is:", o: ["Ovum", "Zygote", "Sperm", "Embryo"], a: 2 },
+        { q: "Female reproductive cell is:", o: ["Ovum", "Sperm", "Zygote", "Foetus"], a: 0 },
+        { q: "Number of chromosomes in humans:", o: ["23", "44", "46", "48"], a: 2 },
+        { q: "Excretion in plants occurs through:", o: ["Roots", "Stomata", "Flowers", "Fruits"], a: 1 },
+        { q: "Transpiration occurs through:", o: ["Roots", "Stem", "Stomata", "Xylem"], a: 2 },
+        { q: "Xylem transports:", o: ["Food", "Water", "Oxygen", "Hormones"], a: 1 },
+        { q: "Phloem transports:", o: ["Water", "Minerals", "Food", "Oxygen"], a: 2 },
+        { q: "Breathing is a:", o: ["Chemical process", "Physical process", "Biological process", "Mechanical process"], a: 1 },
+        { q: "Aerobic respiration needs:", o: ["Nitrogen", "Carbon dioxide", "Oxygen", "Hydrogen"], a: 2 },
+        { q: "Anaerobic respiration produces:", o: ["CO₂ only", "Oxygen", "Lactic acid / alcohol", "Water only"], a: 2 },
+        { q: "Virus is:", o: ["Cellular", "Non-cellular", "Multicellular", "Plant"], a: 1 },
+        { q: "AIDS is caused by:", o: ["Bacteria", "Fungus", "Virus", "Protozoa"], a: 2 },
+        { q: "Study of plants is called:", o: ["Zoology", "Botany", "Ecology", "Genetics"], a: 1 },
+        { q: "Study of heredity is:", o: ["Anatomy", "Physiology", "Genetics", "Cytology"], a: 2 },
+        { q: "Human skeleton has bones:", o: ["200", "206", "210", "212"], a: 1 },
+        { q: "Inhaled air has more:", o: ["CO₂", "Oxygen", "Nitrogen", "Water vapor"], a: 1 },
+        { q: "Exhaled air has more:", o: ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"], a: 2 },
+        { q: "Main function of roots:", o: ["Photosynthesis", "Support & absorption", "Respiration", "Reproduction"], a: 1 },
+        { q: "Seed germination needs:", o: ["Light only", "Oxygen, water", "CO₂ only", "Soil only"], a: 1 },
+        { q: "Largest gland in human body:", o: ["Pancreas", "Thyroid", "Liver", "Pituitary"], a: 2 },
+        { q: "Hormones are secreted by:", o: ["Duct glands", "Endocrine glands", "Exocrine glands", "Salivary glands"], a: 1 },
+        { q: "Sense organ for hearing:", o: ["Eye", "Ear", "Nose", "Skin"], a: 1 },
+        { q: "Night blindness is due to deficiency of:", o: ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"], a: 0 },
+        { q: "Balance of body is controlled by:", o: ["Cerebrum", "Medulla", "Cerebellum", "Spinal cord"], a: 2 }
     ]
 };
 
@@ -231,14 +283,23 @@ let currentQuestions = [];
 let currentQuestionIndex = 0;
 let userAnswers = [];
 let score = 0;
+let userProfile = { name: '', elective: 'computer' };
+let selectedSubjectMode = '';
+let timerSettings = { mode: 'normal', duration: 0 }; // duration in seconds
+let quizStartTime;
+let quizTimerInterval;
+let finalTimeStr = '00:00';
 
 // --- DOM ELEMENTS ---
 const introScreen = document.getElementById('intro-screen');
+const regScreen = document.getElementById('reg-screen');
 const menuScreen = document.getElementById('menu-screen');
+const timerScreen = document.getElementById('timer-screen');
 const quizScreen = document.getElementById('quiz-screen');
 const resultScreen = document.getElementById('result-screen');
 
 const startBtn = document.getElementById('start-btn');
+const proceedBtn = document.getElementById('proceed-btn');
 const questionText = document.getElementById('question-text');
 const optionsContainer = document.getElementById('options-container');
 const nextBtn = document.getElementById('next-btn');
@@ -249,10 +310,74 @@ const finalScore = document.getElementById('final-score');
 const resultMessage = document.getElementById('result-message');
 const reviewList = document.getElementById('review-list');
 const totalQLabel = document.getElementById('total-q');
+const resultUserName = document.getElementById('result-user-name');
+const btnElective = document.getElementById('btn-elective');
+const timerDisplay = document.getElementById('timer-display');
+const resultTime = document.getElementById('result-time');
+const startBattleBtn = document.getElementById('start-battle-btn');
+const goalInputBox = document.getElementById('goal-input-box');
+const goalMinutesInput = document.getElementById('goal-minutes');
 
 // --- EVENT LISTENERS ---
 startBtn.addEventListener('click', () => {
-    switchScreen(introScreen, menuScreen);
+    switchScreen(introScreen, regScreen);
+});
+
+proceedBtn.addEventListener('click', () => {
+    const nameInput = document.getElementById('reg-name');
+    const electiveInput = document.querySelector('input[name="elective"]:checked');
+    const errorMsg = document.getElementById('reg-error');
+
+    if (!nameInput.value.trim()) {
+        errorMsg.classList.add('visible');
+        return;
+    }
+
+    userProfile.name = nameInput.value.trim();
+    userProfile.elective = electiveInput.value;
+
+    // Update Menu UI based on elective
+    if (userProfile.elective === 'biology') {
+        btnElective.className = 'menu-card biology';
+        btnElective.innerHTML = `<div class="icon-box">🧬</div><div class="card-text"><h3>Biology</h3><p>Life & Nature</p></div>`;
+        btnElective.onclick = () => startQuiz('biology');
+    } else {
+        btnElective.className = 'menu-card computer';
+        btnElective.innerHTML = `<div class="icon-box">💻</div><div class="card-text"><h3>Computer</h3><p>Tech & Code</p></div>`;
+        btnElective.onclick = () => startQuiz('computer');
+    }
+
+    switchScreen(regScreen, menuScreen);
+});
+
+startBattleBtn.addEventListener('click', () => {
+    const timerType = document.querySelector('input[name="timerType"]:checked').value;
+    
+    if (timerType === 'goal') {
+        const mins = parseInt(goalMinutesInput.value);
+        if (isNaN(mins) || mins <= 0 || mins > 100) {
+            goalMinutesInput.style.borderColor = 'var(--danger)';
+            return;
+        }
+        timerSettings.mode = 'goal';
+        timerSettings.duration = mins * 60;
+    } else {
+        timerSettings.mode = 'normal';
+        timerSettings.duration = 0;
+    }
+    
+    initQuiz();
+});
+
+goalMinutesInput.addEventListener('input', (e) => {
+    const val = parseInt(e.target.value);
+    if (val > 100) {
+        e.target.style.borderColor = 'var(--danger)';
+        startBattleBtn.disabled = true;
+    } else {
+        e.target.style.borderColor = 'var(--glass-border)';
+        startBattleBtn.disabled = false;
+    }
 });
 
 nextBtn.addEventListener('click', nextQuestion);
@@ -293,15 +418,50 @@ function shuffleOptionsForQuestion(question) {
     };
 }
 
+function updateTimer() {
+    const now = Date.now();
+    
+    if (timerSettings.mode === 'normal') {
+        const elapsed = Math.floor((now - quizStartTime) / 1000);
+        const m = Math.floor(elapsed / 60).toString().padStart(2, '0');
+        const s = (elapsed % 60).toString().padStart(2, '0');
+        finalTimeStr = `${m}:${s}`;
+    } else {
+        // Goal mode: Countdown
+        const elapsed = Math.floor((now - quizStartTime) / 1000);
+        let remaining = timerSettings.duration - elapsed;
+        
+        if (remaining <= 0) {
+            remaining = 0;
+            finalTimeStr = "00:00";
+            if (timerDisplay) timerDisplay.textContent = finalTimeStr;
+            clearInterval(quizTimerInterval);
+            showResult(true); // true indicates time up
+            return;
+        }
+        
+        const m = Math.floor(remaining / 60).toString().padStart(2, '0');
+        const s = (remaining % 60).toString().padStart(2, '0');
+        finalTimeStr = `${m}:${s}`;
+    }
+    
+    if (timerDisplay) timerDisplay.textContent = finalTimeStr;
+}
+
 function startQuiz(mode) {
+    selectedSubjectMode = mode;
+    switchScreen(menuScreen, timerScreen);
+}
+
+function initQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     userAnswers = [];
     currentQuestions = [];
 
-    if (mode === 'mixed') {
+    if (selectedSubjectMode === 'mixed') {
         // pick 25 from each subject (or available count if <25)
-        const subjects = ['math', 'physics', 'chemistry', 'computer'];
+        const subjects = ['math', 'physics', 'chemistry', userProfile.elective];
         let pool = [];
         subjects.forEach(sub => {
             const available = db[sub] || [];
@@ -323,7 +483,7 @@ function startQuiz(mode) {
         });
         subjectTag.textContent = "Mixed Battle";
     } else {
-        const avail = db[mode] || [];
+        const avail = db[selectedSubjectMode] || [];
         // keep previous behavior: pick up to 50 (you can change this)
         const picked = shuffleArray(deepCopy(avail)).slice(0, 50);
         currentQuestions = picked.map(q => {
@@ -335,13 +495,20 @@ function startQuiz(mode) {
                 a: shuffled.a
             };
         });
-        subjectTag.textContent = mode.charAt(0).toUpperCase() + mode.slice(1);
+        subjectTag.textContent = selectedSubjectMode.charAt(0).toUpperCase() + selectedSubjectMode.slice(1);
     }
 
     // update total label in result screen
     totalQLabel.textContent = `/ ${currentQuestions.length}`;
 
-    switchScreen(menuScreen, quizScreen);
+    switchScreen(timerScreen, quizScreen);
+    
+    // Start Timer
+    quizStartTime = Date.now();
+    clearInterval(quizTimerInterval);
+    quizTimerInterval = setInterval(updateTimer, 1000);
+    updateTimer();
+
     renderQuestion();
 }
 
@@ -426,9 +593,13 @@ function nextQuestion() {
     }
 }
 
-function showResult() {
+function showResult(isTimeUp = false) {
+    clearInterval(quizTimerInterval);
     switchScreen(quizScreen, resultScreen);
 
+    resultUserName.textContent = `Cadet: ${userProfile.name}`;
+    const timeLabel = timerSettings.mode === 'goal' ? 'Time Left' : 'Time Taken';
+    if (resultTime) resultTime.textContent = `${timeLabel}: ${finalTimeStr}`;
     finalScore.textContent = 0;
     setTimeout(() => {
         let startScore = 0;
@@ -446,7 +617,8 @@ function showResult() {
     }, 300);
     
     const percentage = (score / currentQuestions.length) * 100;
-    if (percentage >= 90) resultMessage.textContent = "Legendary! 🏆";
+    if (isTimeUp) resultMessage.textContent = "Time's Up! ⏰";
+    else if (percentage >= 90) resultMessage.textContent = "Legendary! 🏆";
     else if (percentage >= 70) resultMessage.textContent = "Excellent Work! 🌟";
     else if (percentage >= 50) resultMessage.textContent = "Good Effort! 👍";
     else resultMessage.textContent = "Keep Practicing! 📚";
@@ -502,13 +674,16 @@ function downloadPDF() {
     doc.setFontSize(12);
     doc.setTextColor(50, 50, 50);
     doc.text(`Subject: ${subjectTag.textContent}`, 20, 35);
-    doc.text(`Score: ${score} / ${currentQuestions.length}`, 20, 42);
+    doc.text(`Name: ${userProfile.name}`, 20, 42);
+    const timeLabel = timerSettings.mode === 'goal' ? 'Time Left' : 'Time Taken';
+    doc.text(`${timeLabel}: ${finalTimeStr}`, 150, 42);
+    doc.text(`Score: ${score} / ${currentQuestions.length}`, 20, 49);
     doc.text(`Date: ${new Date().toLocaleDateString()}`, 150, 35);
 
     doc.setLineWidth(0.5);
-    doc.line(20, 48, 190, 48);
+    doc.line(20, 55, 190, 55);
 
-    let y = 60;
+    let y = 65;
 
     userAnswers.forEach((ans, index) => {
         if (y > 270) {
@@ -539,6 +714,15 @@ function downloadPDF() {
     });
 
     doc.save("Kips_Result.pdf");
+}
+
+function toggleTimerInput() {
+    const type = document.querySelector('input[name="timerType"]:checked').value;
+    if (type === 'goal') {
+        goalInputBox.classList.add('active');
+    } else {
+        goalInputBox.classList.remove('active');
+    }
 }
 
 // --- Keyboard Support ---

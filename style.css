@@ -253,6 +253,7 @@ button {
 .menu-card.physics::before { content:''; position: absolute; left: 0; width: 4px; height: 100%; background: #3b82f6; }
 .menu-card.chemistry::before { content:''; position: absolute; left: 0; width: 4px; height: 100%; background: #10b981; }
 .menu-card.computer::before { content:''; position: absolute; left: 0; width: 4px; height: 100%; background: #d946ef; }
+.menu-card.biology::before { content:''; position: absolute; left: 0; width: 4px; height: 100%; background: #84cc16; }
 
 .menu-card .icon-box {
     font-size: 2.5rem;
@@ -270,11 +271,15 @@ button {
 .quiz-header { margin-bottom: 20px; }
 
 .header-top {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     margin-bottom: 15px;
 }
+
+.header-top > :first-child { justify-self: start; }
+.header-top > :nth-child(2) { justify-self: center; }
+.header-top > :last-child { justify-self: end; }
 
 .badge {
     background: rgba(99, 102, 241, 0.2);
@@ -422,6 +427,40 @@ button {
 
 .review-q { display: block; font-weight: 600; margin-bottom: 5px; font-size: 0.95rem; }
 .review-ans { display: block; font-size: 0.85rem; color: var(--text-muted); }
+
+/* --- Registration Screen --- */
+.form-group { margin-bottom: 20px; text-align: left; width: 100%; }
+.form-label { display: block; margin-bottom: 8px; color: var(--text-muted); font-size: 0.9rem; }
+.form-input { 
+    width: 100%; 
+    padding: 12px 16px; 
+    background: rgba(255,255,255,0.05); 
+    border: 1px solid var(--glass-border); 
+    border-radius: 12px; 
+    color: white; 
+    font-family: inherit; 
+    outline: none; 
+    transition: border-color 0.3s; 
+}
+.form-input:focus { border-color: var(--primary); }
+
+.radio-group { display: flex; gap: 15px; }
+.radio-label { flex: 1; cursor: pointer; position: relative; }
+.radio-input { display: none; }
+.radio-card { display: flex; align-items: center; justify-content: center; padding: 15px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 12px; transition: all 0.3s; color: var(--text-muted); gap: 10px; font-weight: 500; }
+.radio-input:checked + .radio-card { background: rgba(99, 102, 241, 0.2); border-color: var(--primary); color: white; box-shadow: 0 0 15px rgba(99, 102, 241, 0.3); }
+
+.error-msg { color: var(--danger); font-size: 0.85rem; margin-top: 10px; min-height: 20px; opacity: 0; transition: opacity 0.3s; }
+.error-msg.visible { opacity: 1; }
+
+/* --- Timer Options --- */
+.timer-input-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+}
+.timer-input-container.active { max-height: 100px; opacity: 1; margin-top: 15px; }
 
 /* --- Mobile Optimization --- */
 @media (max-width: 768px) {
