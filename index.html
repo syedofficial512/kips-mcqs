@@ -60,6 +60,28 @@
             </div>
         </div>
 
+        <!-- Difficulty Screen -->
+        <div id="difficulty-screen" class="screen hidden">
+            <header class="app-header">
+                <h2>Select Difficulty</h2>
+                <p>Choose your challenge level</p>
+            </header>
+            <div class="menu-grid">
+                <button class="menu-card chemistry" onclick="selectDifficulty('easy')">
+                    <div class="icon-box">🐣</div>
+                    <div class="card-text"><h3>Easy</h3><p>Warm-up & Basics</p></div>
+                </button>
+                <button class="menu-card physics" onclick="selectDifficulty('medium')">
+                    <div class="icon-box">🔥</div>
+                    <div class="card-text"><h3>Medium</h3><p>Standard Battle</p></div>
+                </button>
+                <button class="menu-card math" onclick="selectDifficulty('hard')">
+                    <div class="icon-box">💀</div>
+                    <div class="card-text"><h3>Hard</h3><p>Legendary Mode</p></div>
+                </button>
+            </div>
+        </div>
+
         <!-- Menu Screen -->
         <div id="menu-screen" class="screen hidden">
             <header class="app-header">
